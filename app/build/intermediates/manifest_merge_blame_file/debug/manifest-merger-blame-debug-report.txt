@@ -1,0 +1,207 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.google.mlkit.vision.demo"
+4    android:installLocation="auto"
+5    android:versionCode="11"
+6    android:versionName="1.11" >
+7    <!--
+8 CameraX libraries require minSdkVersion 21, while this quickstart app
+9    supports low to 19. Needs to use overrideLibrary to make the merger tool
+10    ignore this conflict and import the libraries while keeping the app's lower
+11    minSdkVersion value. In code, will check SDK version, before calling CameraX
+12    APIs.
+13    -->
+14    <uses-sdk
+14-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:13:5-157
+15        android:minSdkVersion="28"
+15-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:13:5-157
+16        android:targetSdkVersion="32" />
+16-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:13:5-157
+17
+18    <uses-feature android:name="android.hardware.camera" />
+18-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:15:5-60
+18-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:15:19-57
+19
+20    <uses-permission android:name="android.permission.INTERNET" />
+20-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:17:5-67
+20-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:17:22-64
+21    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+21-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:18:5-81
+21-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:18:22-78
+22    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+22-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:19:5-80
+22-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:19:22-77
+23    <uses-permission android:name="android.permission.CAMERA" />
+23-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:20:5-65
+23-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:20:22-62
+24
+25    <queries>
+25-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:22:5-26:15
+26        <intent>
+26-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:23:9-25:18
+27            <action android:name="android.media.action.IMAGE_CAPTURE" />
+27-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:24:13-73
+27-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:24:21-70
+28        </intent>
+29    </queries>
+30
+31    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+32    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+33    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+33-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/romankurdadze/.gradle/caches/transforms-3/9d575678834f906ce38e27f04268b977/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:5-79
+33-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/romankurdadze/.gradle/caches/transforms-3/9d575678834f906ce38e27f04268b977/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:22-76
+34
+35    <application
+35-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:28:5-64:19
+36        android:name="androidx.multidex.MultiDexApplication"
+36-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:29:9-61
+37        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+37-->[androidx.core:core:1.5.0] /Users/romankurdadze/.gradle/caches/transforms-3/7663ec45a6d9f5ead3501ba6b468c93e/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
+38        android:debuggable="true"
+39        android:extractNativeLibs="false"
+40        android:icon="@drawable/logo_mlkit"
+40-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:30:9-44
+41        android:label="@string/app_name"
+41-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:31:9-41
+42        android:testOnly="true"
+43        android:theme="@style/Theme.AppCompat" >
+43-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:32:9-47
+44        <activity
+44-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:34:9-38:20
+45            android:name="com.google.mlkit.vision.demo.java.LivePreviewActivity"
+45-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:35:13-53
+46            android:exported="false"
+46-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:36:13-37
+47            android:theme="@style/AppTheme" >
+47-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:37:13-44
+48        </activity>
+49
+50        <meta-data
+50-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:40:9-42:69
+51            android:name="com.google.android.gms.version"
+51-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:41:13-58
+52            android:value="@integer/google_play_services_version" />
+52-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:42:13-66
+53        <!--
+54 Optional: Add it to automatically download ML model to device after
+55          your app is installed.
+56        -->
+57        <meta-data
+57-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:47:9-49:63
+58            android:name="com.google.mlkit.vision.DEPENDENCIES"
+58-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:48:13-64
+59            android:value="barcode,face,ocr,ica,custom_ica" />
+59-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:49:13-60
+60
+61        <activity
+61-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:51:9-60:20
+62            android:name="com.google.mlkit.vision.demo.java.StillImageActivity"
+62-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:52:13-52
+63            android:exported="true"
+63-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:53:13-36
+64            android:theme="@style/AppTheme" >
+64-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:54:13-44
+65            <intent-filter>
+65-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:55:13-59:29
+66                <action android:name="android.intent.action.MAIN" />
+66-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:56:17-69
+66-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:56:25-66
+67
+68                <category android:name="android.intent.category.LAUNCHER" />
+68-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:58:17-77
+68-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:58:27-74
+69            </intent-filter>
+70        </activity>
+71        <activity
+71-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:61:9-63:40
+72            android:name="com.google.mlkit.vision.demo.preference.SettingsActivity"
+72-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:62:13-56
+73            android:exported="false" />
+73-->/Users/romankurdadze/AndroidStudioProjects/_Vision/vision-quickstart5/app/src/main/AndroidManifest.xml:63:13-37
+74
+75        <service
+75-->[com.google.mlkit:face-mesh-detection:16.0.0-beta1] /Users/romankurdadze/.gradle/caches/transforms-3/46925c5e3d52892483f01e75e13ae13b/transformed/jetified-face-mesh-detection-16.0.0-beta1/AndroidManifest.xml:8:9-14:19
+76            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+76-->[com.google.mlkit:face-mesh-detection:16.0.0-beta1] /Users/romankurdadze/.gradle/caches/transforms-3/46925c5e3d52892483f01e75e13ae13b/transformed/jetified-face-mesh-detection-16.0.0-beta1/AndroidManifest.xml:9:13-91
+77            android:directBootAware="true"
+77-->[com.google.mlkit:common:18.5.0] /Users/romankurdadze/.gradle/caches/transforms-3/18fb9df60fa6bd139ce4fc1ed95a5a61/transformed/jetified-common-18.5.0/AndroidManifest.xml:17:13-43
+78            android:exported="false" >
+78-->[com.google.mlkit:face-mesh-detection:16.0.0-beta1] /Users/romankurdadze/.gradle/caches/transforms-3/46925c5e3d52892483f01e75e13ae13b/transformed/jetified-face-mesh-detection-16.0.0-beta1/AndroidManifest.xml:10:13-37
+79            <meta-data
+79-->[com.google.mlkit:face-mesh-detection:16.0.0-beta1] /Users/romankurdadze/.gradle/caches/transforms-3/46925c5e3d52892483f01e75e13ae13b/transformed/jetified-face-mesh-detection-16.0.0-beta1/AndroidManifest.xml:11:13-13:85
+80                android:name="com.google.firebase.components:com.google.mlkit.vision.facemesh.internal.FaceMeshRegistrar"
+80-->[com.google.mlkit:face-mesh-detection:16.0.0-beta1] /Users/romankurdadze/.gradle/caches/transforms-3/46925c5e3d52892483f01e75e13ae13b/transformed/jetified-face-mesh-detection-16.0.0-beta1/AndroidManifest.xml:12:17-122
+81                android:value="com.google.firebase.components.ComponentRegistrar" />
+81-->[com.google.mlkit:face-mesh-detection:16.0.0-beta1] /Users/romankurdadze/.gradle/caches/transforms-3/46925c5e3d52892483f01e75e13ae13b/transformed/jetified-face-mesh-detection-16.0.0-beta1/AndroidManifest.xml:13:17-82
+82            <meta-data
+82-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] /Users/romankurdadze/.gradle/caches/transforms-3/46c238955950c21da36538a891d6803b/transformed/jetified-play-services-mlkit-face-detection-17.0.1/AndroidManifest.xml:12:13-14:85
+83                android:name="com.google.firebase.components:com.google.mlkit.vision.face.internal.FaceRegistrar"
+83-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] /Users/romankurdadze/.gradle/caches/transforms-3/46c238955950c21da36538a891d6803b/transformed/jetified-play-services-mlkit-face-detection-17.0.1/AndroidManifest.xml:13:17-114
+84                android:value="com.google.firebase.components.ComponentRegistrar" />
+84-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] /Users/romankurdadze/.gradle/caches/transforms-3/46c238955950c21da36538a891d6803b/transformed/jetified-play-services-mlkit-face-detection-17.0.1/AndroidManifest.xml:14:17-82
+85            <meta-data
+85-->[com.google.mlkit:vision-common:17.2.1] /Users/romankurdadze/.gradle/caches/transforms-3/d767a8ef28c1557e76ec68f4f10ae01e/transformed/jetified-vision-common-17.2.1/AndroidManifest.xml:12:13-14:85
+86                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
+86-->[com.google.mlkit:vision-common:17.2.1] /Users/romankurdadze/.gradle/caches/transforms-3/d767a8ef28c1557e76ec68f4f10ae01e/transformed/jetified-vision-common-17.2.1/AndroidManifest.xml:13:17-124
+87                android:value="com.google.firebase.components.ComponentRegistrar" />
+87-->[com.google.mlkit:vision-common:17.2.1] /Users/romankurdadze/.gradle/caches/transforms-3/d767a8ef28c1557e76ec68f4f10ae01e/transformed/jetified-vision-common-17.2.1/AndroidManifest.xml:14:17-82
+88            <meta-data
+88-->[com.google.mlkit:common:18.5.0] /Users/romankurdadze/.gradle/caches/transforms-3/18fb9df60fa6bd139ce4fc1ed95a5a61/transformed/jetified-common-18.5.0/AndroidManifest.xml:20:13-22:85
+89                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
+89-->[com.google.mlkit:common:18.5.0] /Users/romankurdadze/.gradle/caches/transforms-3/18fb9df60fa6bd139ce4fc1ed95a5a61/transformed/jetified-common-18.5.0/AndroidManifest.xml:21:17-120
+90                android:value="com.google.firebase.components.ComponentRegistrar" />
+90-->[com.google.mlkit:common:18.5.0] /Users/romankurdadze/.gradle/caches/transforms-3/18fb9df60fa6bd139ce4fc1ed95a5a61/transformed/jetified-common-18.5.0/AndroidManifest.xml:22:17-82
+91        </service>
+92
+93        <provider
+93-->[com.google.mlkit:common:18.5.0] /Users/romankurdadze/.gradle/caches/transforms-3/18fb9df60fa6bd139ce4fc1ed95a5a61/transformed/jetified-common-18.5.0/AndroidManifest.xml:9:9-13:38
+94            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+94-->[com.google.mlkit:common:18.5.0] /Users/romankurdadze/.gradle/caches/transforms-3/18fb9df60fa6bd139ce4fc1ed95a5a61/transformed/jetified-common-18.5.0/AndroidManifest.xml:10:13-78
+95            android:authorities="com.google.mlkit.vision.demo.mlkitinitprovider"
+95-->[com.google.mlkit:common:18.5.0] /Users/romankurdadze/.gradle/caches/transforms-3/18fb9df60fa6bd139ce4fc1ed95a5a61/transformed/jetified-common-18.5.0/AndroidManifest.xml:11:13-69
+96            android:exported="false"
+96-->[com.google.mlkit:common:18.5.0] /Users/romankurdadze/.gradle/caches/transforms-3/18fb9df60fa6bd139ce4fc1ed95a5a61/transformed/jetified-common-18.5.0/AndroidManifest.xml:12:13-37
+97            android:initOrder="99" />
+97-->[com.google.mlkit:common:18.5.0] /Users/romankurdadze/.gradle/caches/transforms-3/18fb9df60fa6bd139ce4fc1ed95a5a61/transformed/jetified-common-18.5.0/AndroidManifest.xml:13:13-35
+98
+99        <activity
+99-->[com.google.android.gms:play-services-base:18.1.0] /Users/romankurdadze/.gradle/caches/transforms-3/ad6fb931caaaa1bd869473801ff9617a/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+100            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+100-->[com.google.android.gms:play-services-base:18.1.0] /Users/romankurdadze/.gradle/caches/transforms-3/ad6fb931caaaa1bd869473801ff9617a/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+101            android:exported="false"
+101-->[com.google.android.gms:play-services-base:18.1.0] /Users/romankurdadze/.gradle/caches/transforms-3/ad6fb931caaaa1bd869473801ff9617a/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+102            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+102-->[com.google.android.gms:play-services-base:18.1.0] /Users/romankurdadze/.gradle/caches/transforms-3/ad6fb931caaaa1bd869473801ff9617a/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+103
+104        <service
+104-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/romankurdadze/.gradle/caches/transforms-3/9d575678834f906ce38e27f04268b977/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:29:9-35:19
+105            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+105-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/romankurdadze/.gradle/caches/transforms-3/9d575678834f906ce38e27f04268b977/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:30:13-103
+106            android:exported="false" >
+106-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/romankurdadze/.gradle/caches/transforms-3/9d575678834f906ce38e27f04268b977/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:31:13-37
+107            <meta-data
+107-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/romankurdadze/.gradle/caches/transforms-3/9d575678834f906ce38e27f04268b977/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:32:13-34:39
+108                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+108-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/romankurdadze/.gradle/caches/transforms-3/9d575678834f906ce38e27f04268b977/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:33:17-94
+109                android:value="cct" />
+109-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/romankurdadze/.gradle/caches/transforms-3/9d575678834f906ce38e27f04268b977/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:34:17-36
+110        </service>
+111        <service
+111-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/romankurdadze/.gradle/caches/transforms-3/dab36aa164b248d965214a8816fe6df9/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:26:9-30:19
+112            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+112-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/romankurdadze/.gradle/caches/transforms-3/dab36aa164b248d965214a8816fe6df9/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:27:13-117
+113            android:exported="false"
+113-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/romankurdadze/.gradle/caches/transforms-3/dab36aa164b248d965214a8816fe6df9/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:28:13-37
+114            android:permission="android.permission.BIND_JOB_SERVICE" >
+114-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/romankurdadze/.gradle/caches/transforms-3/dab36aa164b248d965214a8816fe6df9/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:29:13-69
+115        </service>
+116
+117        <receiver
+117-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/romankurdadze/.gradle/caches/transforms-3/dab36aa164b248d965214a8816fe6df9/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:32:9-34:40
+118            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+118-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/romankurdadze/.gradle/caches/transforms-3/dab36aa164b248d965214a8816fe6df9/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:33:13-132
+119            android:exported="false" />
+119-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/romankurdadze/.gradle/caches/transforms-3/dab36aa164b248d965214a8816fe6df9/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:34:13-37
+120    </application>
+121
+122</manifest>
